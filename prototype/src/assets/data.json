@@ -1,0 +1,121 @@
+{
+    "schedule": [
+      {
+        "week": 14,
+        "days": {
+          "Monday": [
+            {
+              "time": "8am-10am",
+              "class": "Introduction to Programming",
+              "room": "D202",
+              "roomType": "Computer Lab"
+            },
+            {
+              "time": "10am-12pm",
+              "class": "Database Systems",
+              "room": "D313",
+              "roomType": "Lecture Hall"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "1pm-3pm",
+              "class": "Web Development",
+              "room": "D101",
+              "roomType": "Classroom"
+            }
+          ],
+          "Thursday": [],
+          "Friday": [
+            {
+              "time": "10am-12pm",
+              "class": "Networking Fundamentals",
+              "room": "D202",
+              "roomType": "Computer Lab"
+            },
+            {
+              "time": "3pm-5pm",
+              "class": "Cybersecurity Basics",
+              "room": "D313",
+              "roomType": "Lecture Hall"
+            }
+          ]
+        }
+      },
+      {
+        "week": 15,
+        "days": {
+          "Monday": [
+            {
+              "time": "1pm-3pm",
+              "class": "Software Engineering",
+              "room": "D202",
+              "roomType": "Classroom"
+            }
+          ],
+          "Tuesday": [
+            {
+              "time": "10am-12pm",
+              "class": "Data Structures",
+              "room": "D101",
+              "roomType": "Lecture Hall"
+            },
+            {
+              "time": "3pm-5pm",
+              "class": "Algorithms",
+              "room": "D313",
+              "roomType": "Classroom"
+            }
+          ],
+          "Wednesday": [],
+          "Thursday": [
+            {
+              "time": "8am-10am",
+              "class": "Operating Systems",
+              "room": "D202",
+              "roomType": "Computer Lab"
+            }
+          ],
+          "Friday": []
+        }
+      },
+      {
+        "week": 16,
+        "days": {
+          "Monday": [],
+          "Tuesday": [
+            {
+              "time": "8am-10am",
+              "class": "Artificial Intelligence",
+              "room": "D313",
+              "roomType": "Lecture Hall"
+            }
+          ],
+          "Wednesday": [
+            {
+              "time": "1pm-3pm",
+              "class": "Machine Learning",
+              "room": "D101",
+              "roomType": "Computer Lab"
+            },
+            {
+              "time": "3pm-5pm",
+              "class": "Big Data Analysis",
+              "room": "D202",
+              "roomType": "Lecture Hall"
+            }
+          ],
+          "Thursday": [],
+          "Friday": [
+            {
+              "time": "1pm-3pm",
+              "class": "Cloud Computing",
+              "room": "D202",
+              "roomType": "Computer Lab"
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
