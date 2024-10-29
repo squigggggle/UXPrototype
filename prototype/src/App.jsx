@@ -33,6 +33,13 @@ function App() {
         <option value="Thursday">Thursday</option>
         <option value="Friday">Friday</option>
       </select>
+      <select>
+        <option value="" selected="selected">Select a timeslot</option>
+        <option value="8am-10am">8AM - 10AM</option>
+        <option value="10am-12pm">10AM - 12PM</option>
+        <option value="1pm-3pm">1PM - 3PM</option>
+        <option value="3pm-5pm">3PM - 5PM</option>
+      </select>
     </>
   )
 }
