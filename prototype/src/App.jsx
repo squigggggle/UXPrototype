@@ -25,6 +25,14 @@ function App() {
         <option value="15">Week 15</option>
         <option value="16">Week 16</option>
       </select>
+      <select>
+        <option value="" selected="selected">Select a day</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+      </select>
     </>
   )
 }
