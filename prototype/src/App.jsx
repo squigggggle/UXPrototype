@@ -40,6 +40,12 @@ function App() {
         <option value="1pm-3pm">1PM - 3PM</option>
         <option value="3pm-5pm">3PM - 5PM</option>
       </select>
+      <select>
+        <option value="" selected="selected">Select a room type</option>
+        <option value="Computer Lab">Computer Lab</option>
+        <option value="Lecture Hall">Lecture Hall</option>
+        <option value="Classroom">Classroom</option>
+      </select>
     </>
   )
 }
