@@ -1,9 +1,11 @@
 {
-    "schedule": [
-      {
-        "week": 14,
-        "days": {
-          "Monday": [
+  "weeks": [
+    {
+      "week": 14,
+      "days": [
+        {
+          "day": "Monday",
+          "classes": [
             {
               "time": "8am-10am",
               "class": "Introduction to Programming",
@@ -16,17 +18,26 @@
               "room": "D313",
               "roomType": "Lecture Hall"
             }
-          ],
-          "Wednesday": [
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "classes": [
             {
               "time": "1pm-3pm",
               "class": "Web Development",
               "room": "D101",
               "roomType": "Classroom"
             }
-          ],
-          "Thursday": [],
-          "Friday": [
+          ]
+        },
+        {
+          "day": "Thursday",
+          "classes": []
+        },
+        {
+          "day": "Friday",
+          "classes": [
             {
               "time": "10am-12pm",
               "class": "Networking Fundamentals",
@@ -41,19 +52,25 @@
             }
           ]
         }
-      },
-      {
-        "week": 15,
-        "days": {
-          "Monday": [
+      ]
+    },
+    {
+      "week": 15,
+      "days": [
+        {
+          "day": "Monday",
+          "classes": [
             {
               "time": "1pm-3pm",
               "class": "Software Engineering",
               "room": "D202",
               "roomType": "Classroom"
             }
-          ],
-          "Tuesday": [
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "classes": [
             {
               "time": "10am-12pm",
               "class": "Data Structures",
@@ -66,32 +83,50 @@
               "room": "D313",
               "roomType": "Classroom"
             }
-          ],
-          "Wednesday": [],
-          "Thursday": [
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "classes": []
+        },
+        {
+          "day": "Thursday",
+          "classes": [
             {
               "time": "8am-10am",
               "class": "Operating Systems",
               "room": "D202",
               "roomType": "Computer Lab"
             }
-          ],
-          "Friday": []
+          ]
+        },
+        {
+          "day": "Friday",
+          "classes": []
         }
-      },
-      {
-        "week": 16,
-        "days": {
-          "Monday": [],
-          "Tuesday": [
+      ]
+    },
+    {
+      "week": 16,
+      "days": [
+        {
+          "day": "Monday",
+          "classes": []
+        },
+        {
+          "day": "Tuesday",
+          "classes": [
             {
               "time": "8am-10am",
               "class": "Artificial Intelligence",
               "room": "D313",
               "roomType": "Lecture Hall"
             }
-          ],
-          "Wednesday": [
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "classes": [
             {
               "time": "1pm-3pm",
               "class": "Machine Learning",
@@ -104,9 +139,15 @@
               "room": "D202",
               "roomType": "Lecture Hall"
             }
-          ],
-          "Thursday": [],
-          "Friday": [
+          ]
+        },
+        {
+          "day": "Thursday",
+          "classes": []
+        },
+        {
+          "day": "Friday",
+          "classes": [
             {
               "time": "1pm-3pm",
               "class": "Cloud Computing",
@@ -115,7 +156,7 @@
             }
           ]
         }
-      }
-    ]
-  }
-  
+      ]
+    }
+  ]
+}
