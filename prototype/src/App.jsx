@@ -1,53 +1,98 @@
-
+import { useState } from 'react'
 import './App.css'
+import data from './assets/data.json'
 
 function App() {
- 
+    const [searchTerm, setSearchTerm] = useState('')
+    const [selectedWeek, setSelectedWeek] = useState('')
+    const [selectedDay, setSelectedDay] = useState('')
+    const [selectedTime, setSelectedTime] = useState('')
 
-  return (
-    <>
-      <input type="search"></input>
-      <select>
-        <option value="1" disabled="true">Week 1</option>
-        <option value="2" disabled="true">Week 2</option>
-        <option value="3" disabled="true">Week 3</option>
-        <option value="4" disabled="true">Week 4</option>
-        <option value="5" disabled="true">Week 5</option>
-        <option value="6" disabled="true">Week 6</option>
-        <option value="7" disabled="true">Week 7</option>
-        <option value="8" disabled="true">Week 8</option>
-        <option value="9" disabled="true">Week 9</option>
-        <option value="10" disabled="true">Week 10</option>
-        <option value="11" disabled="true">Week 11</option>
-        <option value="12" disabled="true">Week 12</option>
-        <option value="13" disabled="true">Week 13</option>
-        <option value="14" selected="selected">Week 14</option>
-        <option value="15">Week 15</option>
-        <option value="16">Week 16</option>
-      </select>
-      <select>
-        <option value="" selected="selected">Select a day</option>
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Friday">Friday</option>
-      </select>
-      <select>
-        <option value="" selected="selected">Select a timeslot</option>
-        <option value="8am-10am">8AM - 10AM</option>
-        <option value="10am-12pm">10AM - 12PM</option>
-        <option value="1pm-3pm">1PM - 3PM</option>
-        <option value="3pm-5pm">3PM - 5PM</option>
-      </select>
-      <select>
-        <option value="" selected="selected">Select a room type</option>
-        <option value="Computer Lab">Computer Lab</option>
-        <option value="Lecture Hall">Lecture Hall</option>
-        <option value="Classroom">Classroom</option>
-      </select>
-    </>
-  )
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value)
+    }
+
+    const handleWeekChange = (event) => {
+        setSelectedWeek(event.target.value)
+    }
+
+    const handleDayChange = (event) => {
+        setSelectedDay(event.target.value)
+      }
+
+    const handleTimeChange = (event) => {
+        setSelectedTime(event.target.value)
+    }
+
+    const filteredWeeks = selectedWeek
+        ? data.weeks.filter((week) => week.week === Number(selectedWeek))
+        : data.weeks
+
+    return (
+        <>
+            <input
+                type="search"
+                placeholder="Search classes..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+            />
+            <select value={selectedWeek} onChange={handleWeekChange}>
+                <option value="">Select a week</option>
+                {data.weeks.map((week, index) => (
+                    <option key={index} value={week.week}>
+                        Week {week.week}
+                    </option>
+                ))}
+            </select>
+            <select value={selectedDay} onChange={handleDayChange}>
+                <option value="">Select a day</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+            </select>
+            <select value={selectedTime} onChange={handleTimeChange}>
+                <option value="">Select a time</option>
+                <option value="8am-10am">8am-10am</option>
+                <option value="10am-12pm">10am-12pm</option>
+                <option value="1pm-3pm">1pm-3pm</option>
+                <option value="3pm-5pm">3pm-5pm</option>
+            </select>
+
+            {filteredWeeks.map((week, weekIndex) => (
+                <div key={weekIndex}>
+                    {week.days
+                    .filter((day) => (selectedDay ? day.day === selectedDay : true))
+                    .map((day, dayIndex) => (
+                        <div key={dayIndex}>
+                            {day.classes
+                                .filter((classroom) =>
+                                    (selectedTime ? classroom.time === selectedTime : true) &&
+                                    (classroom.room.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                        classroom.class.toLowerCase().includes(searchTerm.toLowerCase()))
+                                )
+                                .map((classroom, classIndex) => {
+                                    return (
+                                        <div key={classIndex}
+                                            style={{
+                                                border: '1px solid #ccc',
+                                                padding: '16px',
+                                                marginBottom: '16px',
+                                            }}>
+                                            <h2>{classroom.room}</h2>
+                                            <h3>Week {week.week} {day.day}</h3>
+                                            <p>Class: {classroom.class}</p>
+                                            <p>Time: {classroom.time}</p>
+                                        </div>
+                                    )
+                                })}
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </>
+    )
 }
 
 export default App
