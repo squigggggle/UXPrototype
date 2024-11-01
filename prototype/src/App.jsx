@@ -18,7 +18,7 @@ function App() {
 
     const handleDayChange = (event) => {
         setSelectedDay(event.target.value)
-      }
+    }
 
     const handleTimeChange = (event) => {
         setSelectedTime(event.target.value)
@@ -69,37 +69,25 @@ function App() {
                 <option value="3pm-5pm">3pm-5pm</option>
             </select>
 
-            {filteredWeeks.map((week, weekIndex) => (
-                <div key={weekIndex}>
-                    {week.days
-                    .filter((day) => (selectedDay ? day.day === selectedDay : true))
-                    .map((day, dayIndex) => (
-                        <div key={dayIndex}>
-                            {day.classes
-                                .filter((classroom) =>
-                                    (selectedTime ? classroom.time === selectedTime : true) &&
-                                    (classroom.room.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                                        classroom.class.toLowerCase().includes(searchTerm.toLowerCase()))
-                                )
-                                .map((classroom, classIndex) => {
-                                    return (
-                                        <div key={classIndex}
-                                            style={{
-                                                border: '1px solid #ccc',
-                                                padding: '16px',
-                                                marginBottom: '16px',
-                                            }}>
-                                            <h2>{classroom.room}</h2>
-                                            <h3>Week {week.week} {day.day}</h3>
-                                            <p>Class: {classroom.class}</p>
-                                            <p>Time: {classroom.time}</p>
-                                        </div>
-                                    )
-                                })}
-                        </div>
-                    ))}
-                </div>
-            ))}
+            {filteredClasses.length === 0 ? (
+                <p>No classes found for the selected filters.</p>
+            ) : (
+                filteredClasses.map((timeSlot, index) => (
+                    <div
+                        key={index}
+                        style={{
+                            border: '1px solid #ccc',
+                            padding: '16px',
+                            marginBottom: '16px',
+                        }}
+                    >
+                        <h2>{timeSlot.class.room}</h2>
+                        <h3>Class: {timeSlot.class.name}</h3>
+                        <p>Time: {timeSlot.time}</p>
+                        <p>Type: {timeSlot.class.roomType}</p>
+                    </div>
+                ))
+            )}
         </>
     )
 }
