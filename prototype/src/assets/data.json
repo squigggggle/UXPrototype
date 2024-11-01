@@ -5,50 +5,149 @@
       "days": [
         {
           "day": "Monday",
-          "classes": [
+          "timeSlots": [
             {
               "time": "8am-10am",
-              "class": "Introduction to Programming",
-              "room": "D202",
-              "roomType": "Computer Lab"
+              "class": {
+                "name": "Introduction to Programming",
+                "room": "D202",
+                "roomType": "Computer Lab"
+              }
             },
             {
               "time": "10am-12pm",
-              "class": "Database Systems",
-              "room": "D313",
-              "roomType": "Lecture Hall"
+              "class": {
+                "name": "Database Systems",
+                "room": "D313",
+                "roomType": "Lecture Hall"
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             }
           ]
         },
         {
           "day": "Wednesday",
-          "classes": [
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
             {
               "time": "1pm-3pm",
-              "class": "Web Development",
-              "room": "D101",
-              "roomType": "Classroom"
+              "class": {
+                "name": "Web Development",
+                "room": "D101",
+                "roomType": "Classroom"
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             }
           ]
         },
         {
           "day": "Thursday",
-          "classes": []
-        },
-        {
-          "day": "Friday",
-          "classes": [
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
             {
               "time": "10am-12pm",
-              "class": "Networking Fundamentals",
-              "room": "D202",
-              "roomType": "Computer Lab"
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             },
             {
               "time": "3pm-5pm",
-              "class": "Cybersecurity Basics",
-              "room": "D313",
-              "roomType": "Lecture Hall"
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            }
+          ]
+        },
+        {
+          "day": "Friday",
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": "Networking Fundamentals",
+                "room": "D202",
+                "roomType": "Computer Lab"
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": "Cybersecurity Basics",
+                "room": "D313",
+                "roomType": "Lecture Hall"
+              }
             }
           ]
         }
@@ -59,50 +158,188 @@
       "days": [
         {
           "day": "Monday",
-          "classes": [
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
             {
               "time": "1pm-3pm",
-              "class": "Software Engineering",
-              "room": "D202",
-              "roomType": "Classroom"
+              "class": {
+                "name": "Software Engineering",
+                "room": "D202",
+                "roomType": "Classroom"
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             }
           ]
         },
         {
           "day": "Tuesday",
-          "classes": [
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
             {
               "time": "10am-12pm",
-              "class": "Data Structures",
-              "room": "D101",
-              "roomType": "Lecture Hall"
+              "class": {
+                "name": "Data Structures",
+                "room": "D101",
+                "roomType": "Lecture Hall"
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             },
             {
               "time": "3pm-5pm",
-              "class": "Algorithms",
-              "room": "D313",
-              "roomType": "Classroom"
+              "class": {
+                "name": "Algorithms",
+                "room": "D313",
+                "roomType": "Classroom"
+              }
             }
           ]
         },
         {
           "day": "Wednesday",
-          "classes": []
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            }
+          ]
         },
         {
           "day": "Thursday",
-          "classes": [
+          "timeSlots": [
             {
               "time": "8am-10am",
-              "class": "Operating Systems",
-              "room": "D202",
-              "roomType": "Computer Lab"
+              "class": {
+                "name": "Operating Systems",
+                "room": "D202",
+                "roomType": "Computer Lab"
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             }
           ]
         },
         {
           "day": "Friday",
-          "classes": []
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            }
+          ]
         }
       ]
     },
@@ -111,48 +348,186 @@
       "days": [
         {
           "day": "Monday",
-          "classes": []
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            }
+          ]
         },
         {
           "day": "Tuesday",
-          "classes": [
+          "timeSlots": [
             {
               "time": "8am-10am",
-              "class": "Artificial Intelligence",
-              "room": "D313",
-              "roomType": "Lecture Hall"
+              "class": {
+                "name": "Artificial Intelligence",
+                "room": "D313",
+                "roomType": "Lecture Hall"
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             }
           ]
         },
         {
           "day": "Wednesday",
-          "classes": [
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
             {
               "time": "1pm-3pm",
-              "class": "Machine Learning",
-              "room": "D101",
-              "roomType": "Computer Lab"
+              "class": {
+                "name": "Machine Learning",
+                "room": "D101",
+                "roomType": "Computer Lab"
+              }
             },
             {
               "time": "3pm-5pm",
-              "class": "Big Data Analysis",
-              "room": "D202",
-              "roomType": "Lecture Hall"
+              "class": {
+                "name": "Big Data Analysis",
+                "room": "D202",
+                "roomType": "Lecture Hall"
+              }
             }
           ]
         },
         {
           "day": "Thursday",
-          "classes": []
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "1pm-3pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            }
+          ]
         },
         {
           "day": "Friday",
-          "classes": [
+          "timeSlots": [
+            {
+              "time": "8am-10am",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
+            {
+              "time": "10am-12pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
+            },
             {
               "time": "1pm-3pm",
-              "class": "Cloud Computing",
-              "room": "D202",
-              "roomType": "Computer Lab"
+              "class": {
+                "name": "Cloud Computing",
+                "room": "D202",
+                "roomType": "Computer Lab"
+              }
+            },
+            {
+              "time": "3pm-5pm",
+              "class": {
+                "name": null,
+                "room": null,
+                "roomType": null
+              }
             }
           ]
         }
