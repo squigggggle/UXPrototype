@@ -24,9 +24,18 @@ function App() {
         setSelectedTime(event.target.value)
     }
 
-    const filteredWeeks = selectedWeek
-        ? data.weeks.filter((week) => week.week === Number(selectedWeek))
-        : data.weeks
+    const filteredClasses = data.weeks
+        .filter((week) => selectedWeek ? week.week === Number(selectedWeek) : true)             //week filter
+        .flatMap((week) => week.days)
+        .filter((day) => selectedDay ? day.day === selectedDay : true)                          //day filter
+        .flatMap((day) =>
+            day.timeSlots.filter((timeSlot) =>
+                (selectedTime ? timeSlot.time === selectedTime : true) &&
+                (timeSlot.class.room?.toLowerCase().includes(searchTerm.toLowerCase()) ||       //search filters
+                    timeSlot.class.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    timeSlot.class.roomType?.toLowerCase().includes(searchTerm.toLowerCase()))
+            )
+        )
 
     return (
         <>
