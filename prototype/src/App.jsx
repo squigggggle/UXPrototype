@@ -24,16 +24,21 @@ function App() {
         setSelectedTime(event.target.value)
     }
 
+    const searchWords = searchTerm.toLowerCase().split(' ');
+
+    // takes into account search bar and drop down filters to work together and filter no matter the input
     const filteredClasses = data.weeks
         .filter((week) => selectedWeek ? week.week === Number(selectedWeek) : true)             //week filter
         .flatMap((week) => week.days)
         .filter((day) => selectedDay ? day.day === selectedDay : true)                          //day filter
         .flatMap((day) =>
             day.timeSlots.filter((timeSlot) =>
-                (selectedTime ? timeSlot.time === selectedTime : true) &&
-                (timeSlot.class.room?.toLowerCase().includes(searchTerm.toLowerCase()) ||       //search filters
-                    timeSlot.class.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    timeSlot.class.roomType?.toLowerCase().includes(searchTerm.toLowerCase()))
+                (selectedTime ? timeSlot.time === selectedTime : true) &&                       //time filter
+                searchWords.every(word =>                                                       //search by word filter
+                    timeSlot.class.room?.toLowerCase().includes(word) ||                        //room code
+                    timeSlot.class.name?.toLowerCase().includes(word) ||                        //name of booked class
+                    timeSlot.class.roomType?.toLowerCase().includes(word)                       //type of room
+                )
             )
         )
 
